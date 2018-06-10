@@ -25,7 +25,7 @@ def temptable(cur):
 
 with connect('test.db') as conn:
     cur = conn.cursor()
-    with new_temptable(cur):
+    with temptable(cur):
         cur.execute('insert into points (x, y) values(1, 1)')
         cur.execute('insert into points (x, y) values(1, 2)')
         cur.execute('insert into points (x, y) values(2, 1)')
